@@ -18,6 +18,31 @@ const pool = mysql.createPool({
     database        : 'node_js'
 })
 
+// Login Authentication
+app.put('/:id', (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log(`connected as id ${connection.threadId}`)
+
+        const { first_name, last_name, address, post_code, phone_number, email, username, password } = req.body
+
+        connection.query('UPDATE users SET first_name = ?, last_name = ?, address = ?, post_code = ?, phone_number = ?, email = ?,  username = ?, password = ? WHERE id = ?', [first_name, last_name, address, post_code, phone_number, email, username, password, req.params.id] , (err, rows) => {
+            connection.release() 
+
+            if(!err) {
+                res.send(`user with the name: ${first_name} has been updated.`)
+            } else {
+                console.log(err)
+            }
+
+        })
+
+        console.log(req.body)
+    })
+})
+
+
 // Get all users
 app.get('', (req, res) => {
     pool.getConnection((err, connection) => {

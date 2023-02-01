@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "40d456fd-3193-4079-bb78-f04715c08dc7",
+		"name": "Node Js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14048708"
+	},
+	"item": [
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/10,11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"10,11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Jerico\",\r\n    \"last_name\": \"Infante\",\r\n    \"address\": \"Washington State\",\r\n    \"post_code\": \"1600\",\r\n    \"phone_number\": \"0915523\",\r\n    \"email\": \"echo@gmail.com\",\r\n    \"username\": \"echodunch3\",\r\n    \"password\": \"Pasdf1123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Jorge\",\r\n    \"last_name\": \"Infante\",\r\n    \"address\": \"Washington State\",\r\n    \"post_code\": \"1600\",\r\n    \"phone_number\": \"0915523\",\r\n    \"email\": \"echo@gmail.com\",\r\n    \"username\": \"echodunch3\",\r\n    \"password\": \"Pasdf1123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
